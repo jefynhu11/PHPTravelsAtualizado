@@ -16,12 +16,14 @@ import frameworks.utils.BaseTestFw;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import tasks.CriarContaTask;
 import tasks.EntrarLoginTasks;
+import tasks.ReservarTask;
 
 public class TestCase extends BaseTestFw {
 
 	private WebDriver driver;
 	private EntrarLoginTasks loginTasks;
 	private CriarContaTask criarContaTask;
+	private ReservarTask reservarTask;
 	
 	@Before
 	public void setUp() {
@@ -31,25 +33,26 @@ public class TestCase extends BaseTestFw {
 //		this.driver.manage().window().maximize();
 		this.criarContaTask = new CriarContaTask(driver);
 		this.loginTasks = new EntrarLoginTasks(driver);
+		this.reservarTask = new ReservarTask(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
-	@Test
-	public void criarConta() {
-		criarContaTask.myAccount();
-		criarContaTask.acessoSignUp();
-		
-		criarContaTask.escreverNome();
-		criarContaTask.escreverSobrenome();
-		criarContaTask.escreverPhone();
-		criarContaTask.escreverEmail();
-		criarContaTask.escreverSenha();
-		criarContaTask.escreverConfirmarSenha();
-		criarContaTask.salvarConta();
-		
-		String text = criarContaTask.NomeConta();
-		Assert.assertEquals("Hi, Jeferson Lopes", text);
-	}
+//	@Test
+//	public void criarConta() {
+//		criarContaTask.myAccount();
+//		criarContaTask.acessoSignUp();
+//		
+//		criarContaTask.escreverNome();
+//		criarContaTask.escreverSobrenome();
+//		criarContaTask.escreverPhone();
+//		criarContaTask.escreverEmail();
+//		criarContaTask.escreverSenha();
+//		criarContaTask.escreverConfirmarSenha();
+//		criarContaTask.salvarConta();
+//		
+//		String text = criarContaTask.NomeConta();
+//		Assert.assertEquals("Hi, Jeferson Lopes", text);
+//	}
 	
 	@Test
 	public void logarConta() {
@@ -64,9 +67,15 @@ public class TestCase extends BaseTestFw {
 		Assert.assertEquals("Hi, Jeferson Lopes", text);
 	}
 	
+	@Test
+	public void fazerReservar() {
+		reservarTask.menuHome();
+	}
+	
 	@After
 	public void tearDown() {
-		quitDriver();
+		driver.quit();
+//		quitDriver();
 	}
 	
 }
