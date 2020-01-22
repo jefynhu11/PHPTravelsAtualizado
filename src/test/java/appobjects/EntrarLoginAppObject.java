@@ -66,6 +66,4 @@ public class EntrarLoginAppObject {
 //		return driver.findElement(By.id("8"));
 		return driver.findElement(By.cssSelector("#bookingdetails  tr:nth-child(2)  span.slider.round"));
 	}
-
-
 }
