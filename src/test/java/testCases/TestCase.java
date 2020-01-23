@@ -31,9 +31,11 @@ public class TestCase extends BaseTestFw {
 	@Before
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
+//		WebDriverManager.firefoxdriver().setup();
 		this.driver = new ChromeDriver();
+//		this.driver = new FirefoxDriver();
+		this.driver.get("https://www.phptravels.net");
 //		this.driver.get("https://www.google.com");
-		this.driver.get("https://www.phptravels.net/");
 		this.driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}

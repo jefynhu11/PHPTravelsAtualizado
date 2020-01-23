@@ -28,14 +28,8 @@ public class EntraLoginAppObject {
 //		return driver.findElement(By.xpath("//div[@class='mini-menu']//i[@class='bx bx-user']"));
 //		return driver.findElement(By.xpath("//div[@class='dropdown dropdown-login dropdown-tab show']//a[@id='dropdownCurrency']"));
 //		return driver.findElement(By.xpath("//div[@class='col-md-8 col-10 o1']//div[@class='dropdown dropdown-login dropdown-tab show']"));
-//		return driver.findElement(By.xpath("//div[@id='cookyGotItBtnBox']//button[.='Got it!']"));
-//		return driver.findElement(By.cssSelector(".dropdown.dropdown-login.dropdown-tab #dropdownCurrency")); 
-		return driver.findElement(By.cssSelector("#mobileMenuMain > nav > ul:nth-child(1) > li > a"));
-	}
-	
-	
-	public WebElement getMyContaButton() {
-		return driver.findElement(By.xpath("html/body/div[2]/header/div[1]/div/div/div[2]/div/ul/li[3]/div/a/span"));
+		return driver.findElement(By.cssSelector(".dropdown.dropdown-login.dropdown-tab #dropdownCurrency")); 
+//		return driver.findElement(By.cssSelector("#mobileMenuMain > nav > ul:nth-child(1) > li > a"));
 	}
 	
 	public WebElement getLogin() {
