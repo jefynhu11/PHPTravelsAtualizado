@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import tasks.EntrarLoginTasks;
+import tasks.EntraLoginTasks;
 import testCases.TestCase;
 
 @RunWith(Suite.class)

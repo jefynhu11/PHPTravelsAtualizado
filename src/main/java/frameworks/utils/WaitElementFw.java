@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitElementFw {
 
-	private static final int TIMEOUT_SEC = 15;
+	private static final int TIMEOUT_SEC = 30;
 	
 	public static void visibilityOfElementLocated(WebDriver driver, By by) {
 		WebDriverWait wait = new WebDriverWait(driver, TIMEOUT_SEC);

@@ -4,51 +4,48 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CriarContaAppObject {
+public class CriaContaAppObject {
 
 	private WebDriver driver;
 	
-	public CriarContaAppObject (WebDriver driver) {
+	public CriaContaAppObject (WebDriver driver) {
 		this.driver = driver;
 	}
 	
-	public WebElement myAccountBotao() {
+	public WebElement getMyAccountButton() {
 		return driver.findElement(By.xpath("//*[contains(@class,'dropdown-login')]"));
 	}
 	
-	public WebElement criarContaSingUp() {
+	public WebElement getSingUpButton() {
 		return driver.findElement(By.xpath("//*[@id='header-waypoint-sticky']//a[@class='dropdown-item tr']"));
 	}
 	
-	public WebElement campoNome() {
+	public WebElement getNomeFieldText() {
 		return driver.findElement(By.name("firstname"));
 	}
 	
-	public WebElement campoSobrenome() {
+	public WebElement getSobrenomeFieldText() {
 		return driver.findElement(By.name("lastname"));
 	}
 	
-	public WebElement campoPhone() {
+	public WebElement getPhoneFieldText() {
 		return driver.findElement(By.name("phone"));
 	}
 	
-	public WebElement campoEmail() {
+	public WebElement getEmailFieldText() {
 		return driver.findElement(By.name("email"));
 	}
 	
-	public WebElement campoSenha() {
+	public WebElement getSenhaFieldText() {
 		return driver.findElement(By.name("password"));
 	}
 	
-	public WebElement campoConfirmarSenha() {
+	public WebElement getConfirmarSenhaFieldText() {
 		return driver.findElement(By.name("confirmpassword"));
 	}
 	
-	public WebElement botaoSignUp() {
+	public WebElement getSignUpSalvarButton() {
 		return driver.findElement(By.xpath("//i[@class='fa fa-check-square-o']/.."));
 	}
-	
-	public WebElement obterNomeConta() {
-		return driver.findElement(By.xpath("//h3[.='Hi, Jeferson Lopes']"));
-	}
+
 }

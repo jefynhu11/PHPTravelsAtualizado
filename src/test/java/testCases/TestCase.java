@@ -12,66 +12,43 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import appobjects.HomeAppObject;
 import frameworks.utils.BaseTestFw;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import tasks.CriarContaTask;
-import tasks.EntrarLoginTasks;
+import tasks.CriaContaTask;
+import tasks.EntraLoginTasks;
+import tasks.HomeTask;
 import tasks.ReservaTask;
 
 public class TestCase extends BaseTestFw {
 
 	private WebDriver driver;
-	private EntrarLoginTasks loginTasks = new EntrarLoginTasks(driver);;
-	private CriarContaTask criarContaTask = new CriarContaTask(driver);;
-	private ReservaTask reservarTask = new ReservaTask(driver);;
+	private CriaContaTask criarContaTask = new CriaContaTask(driver);
+	private EntraLoginTasks entrarLoginTasks = new EntraLoginTasks(driver);
+	private HomeTask homeTask = new HomeTask(driver);
+	private ReservaTask reservarTask = new ReservaTask(driver);
 	
 	@Before
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
 		this.driver = new ChromeDriver();
+//		this.driver.get("https://www.google.com");
 		this.driver.get("https://www.phptravels.net/");
 		this.driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
-//	@Test
-//	public void criarConta() {
-//		criarContaTask.myAccount();
-//		criarContaTask.acessoSignUp();
-//		
-//		criarContaTask.escreverNome();
-//		criarContaTask.escreverSobrenome();
-//		criarContaTask.escreverPhone();
-//		criarContaTask.escreverEmail();
-//		criarContaTask.escreverSenha();
-//		criarContaTask.escreverConfirmarSenha();
-//		criarContaTask.salvarConta();
-//		
-//		String text = criarContaTask.NomeConta();
-//		Assert.assertEquals("Hi, Jeferson Lopes", text);
-//	}
-	
-//	@Test
-//	public void logarConta() {
-//		loginTasks.myAccount();
-//		loginTasks.login();
-//		
-//		loginTasks.escreverEmail();
-//		loginTasks.escreverSenha();
-//		loginTasks.logarLogin();
-//
-//		String text = loginTasks.NomeConta();
-//		Assert.assertEquals("Hi, Jeferson Lopes", text);
-//		
-//	}
-	
 	@Test
-	public void logarReservar() throws InterruptedException {
-		loginTasks.acessarLogin();
-		loginTasks.logar();
+	public void logarReservar() {
+		entrarLoginTasks.acessarLogin();
+		entrarLoginTasks.logar();
+		
+		/** teste google **/
+//		entrarLoginTasks.testeGoogle();
+		
+		homeTask.homeHotel();
+		
 		reservarTask.reservarHotel();
-		reservarTask.validarValor();
-		reservarTask.botaoConfirm();
 	}
 	
 	@After
