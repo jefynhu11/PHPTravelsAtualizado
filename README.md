@@ -2,8 +2,8 @@
 ---
 ## Objetivo
 > Treinamento para automação de teste
-> Evolução de conhecimento
-> Melhor pratica
+Evolução de conhecimento
+Melhor pratica
 
 ### IDE
 > ECLIPSE 
