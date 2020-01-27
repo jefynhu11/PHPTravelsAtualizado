@@ -13,12 +13,15 @@ public class EntraLoginTasks {
 		this.driver = driver;
 		this.entraLoginAppObject = new EntraLoginAppObject(driver);
 	}
-	/** Teste Google **/
-	public void testeGoogle() {
-		entraLoginAppObject.getCampoFieldText().sendKeys("teste");
-		entraLoginAppObject.getPesquisarButton().click();
-	}
 
+	public void gotIT() {
+		entraLoginAppObject.getGotIt().click();
+	}
+	
+	public void search() {
+		entraLoginAppObject.getSearchButton().click();
+	}
+	
 	public void acessarLogin() {
 		entraLoginAppObject.getMyAccountButton().click();
 		entraLoginAppObject.getLogin().click();

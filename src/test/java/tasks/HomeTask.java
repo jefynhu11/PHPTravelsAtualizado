@@ -15,6 +15,7 @@ public class HomeTask {
 	}
 	
 	public void homeHotel() {
+		/*** mudou pagina ***/
 		homeAppObject.getMenuHomeButton().click();
 		homeAppObject.getFirstPhotoButton().click();
 	}

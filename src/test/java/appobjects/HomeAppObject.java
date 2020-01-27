@@ -13,7 +13,8 @@ public class HomeAppObject {
 	}
 	
 	public WebElement getMenuHomeButton() {
-		return driver.findElement(By.cssSelector("#mobileMenuMain nav ul:nth-child(1) li a"));
+//		return driver.findElement(By.cssSelector("a[title='home']"));
+		return driver.findElement(By.xpath("//a[@title='home']"));
 	}
 	
 	public WebElement getFirstPhotoButton() {

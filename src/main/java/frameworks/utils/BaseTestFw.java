@@ -3,6 +3,7 @@ package frameworks.utils;
 import static frameworks.utils.DriverManagerFactoryFw.quitDriver;
 import static frameworks.utils.DriverManagerFactoryFw.setDriver;
 
+import org.junit.After;
 import org.openqa.selenium.WebDriver;
 public class BaseTestFw {
 
@@ -13,6 +14,8 @@ public class BaseTestFw {
 		return driver;
 	}
 	
-	public static boolean fechar_browser = true;
-
+	@After
+	public void tearDown() {
+//		quitDriver();
+	}
 }
