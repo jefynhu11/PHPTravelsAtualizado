@@ -17,17 +17,4 @@ public class ReservaAppObject {
 //		return driver.findElement(By.xpath("//form/button[.='Book Now']"));
 	}
 	
-	public WebElement getExtraButton() {
-		return driver.findElement(By.xpath("//input[@id='6']/../span[@class='slider round']"));
-	}
-
-	public WebElement botaoConfirm() {
-//		return driver.findElement(By.xpath("//div[@class='form-group']/button[.='CONFIRM THIS BOOKING']"));
-		return driver.findElement(By.xpath("//div[@class='form-group']/button"));
-	}
-	
-	public WebElement gotItPopupButton() {
-		return driver.findElement(By.xpath("//div[@id='cookyGotItBtnBox']//button"));
-	}
-	
 }

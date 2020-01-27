@@ -6,9 +6,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
+import appobjects.InformaReservaAppObject;
 import frameworks.utils.BaseTestFw;
+import tasks.ConfirmaReservaTask;
 import tasks.EntraLoginTasks;
 import tasks.HomeTask;
+import tasks.InformaReservaTask;
 import tasks.ReservaTask;
 
 public class TestCase extends BaseTestFw {
@@ -18,6 +21,8 @@ public class TestCase extends BaseTestFw {
 	private EntraLoginTasks entrarLoginTasks = new EntraLoginTasks(driver);
 	private HomeTask homeTask = new HomeTask(driver);
 	private ReservaTask reservarTask = new ReservaTask(driver);
+	private InformaReservaTask informaReservaTask = new InformaReservaTask(driver);
+	private ConfirmaReservaTask confirmaTask = new ConfirmaReservaTask(driver);
 
 	@Before
 	public void setUp() {
@@ -30,6 +35,8 @@ public class TestCase extends BaseTestFw {
 		entrarLoginTasks.acessarLogin();
 		entrarLoginTasks.logar();
 		homeTask.homeHotel();
-//		reservarTask.reservarHotel();
+		reservarTask.reservarHotel();
+		informaReservaTask.reservarHotel();
+		confirmaTask.confirmarReservar();
 	}
 }

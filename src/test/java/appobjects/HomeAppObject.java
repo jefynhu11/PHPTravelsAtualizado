@@ -13,11 +13,10 @@ public class HomeAppObject {
 	}
 	
 	public WebElement getMenuHomeButton() {
-//		return driver.findElement(By.cssSelector("a[title='home']"));
-		return driver.findElement(By.xpath("//a[@title='home']"));
+		return driver.findElement(By.cssSelector("a[title='home']"));
 	}
 	
 	public WebElement getFirstPhotoButton() {
-		return driver.findElement(By.xpath("//h2[.='Featured Hotels']/../../div[2]//div[@class='col'][1]"));
+		return driver.findElement(By.cssSelector("div:nth-child(1) > figure > a"));
 	}
 }

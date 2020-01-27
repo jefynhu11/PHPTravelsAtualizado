@@ -16,8 +16,6 @@ public class ReservaTask {
 	
 	public void reservarHotel() {
 		reservaAppObject.getBookNowButton().click();
-		reservaAppObject.getExtraButton().click();
-		
 	}
 
 }
