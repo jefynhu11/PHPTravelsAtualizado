@@ -1,11 +1,4 @@
-# PHPTravels
----
-## Objetivo
-> - Treinamento para automação de teste
-> - Evolução de conhecimento
-> - Melhor pratica
-
-### Como inicia instalar o projeto: 
+## Como inicia instalar o projeto: 
 1. Baixa git "https://github.com/jefynhu11/PHPTravelsAtualizado.git". 
 2. Git clone na pasta eclipse. 
 3. Abra eclipse e faça import: File>Import. 
@@ -17,3 +10,9 @@
 
 ### JRE
 > jre 1.8.0_121 
+
+## Objetivo
+> - Treinamento para automação de teste
+> - Evolução de conhecimento
+> - Melhor pratica
+> - No site PHPTravels
